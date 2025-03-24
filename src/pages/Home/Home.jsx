@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Hero from '../../components/Hero';
-import AboutPage from '../About/About';
 import AboutMe from '../../components/AboutMe/AboutMe';
 import Portfolio from '../../components/Portfolio';
 
