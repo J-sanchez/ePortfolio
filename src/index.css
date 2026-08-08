@@ -1,4 +1,122 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 @import "tailwindcss";
 
+@theme {
+  /* Moody dark -- deep teal-navy base, no plum/rose undertone */
+  --color-bg: #0d1417;
+  --color-surface: #1a2529;
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-text: #ffffff;
+  --color-text-muted: #e9e6e0;
+  --color-accent: #3fb8ad;
+  --color-accent-deep: #2c8a82;
+  --color-accent-soft: rgba(63, 184, 173, 0.14);
+  --color-glow-teal: rgba(63, 184, 173, 0.18);
+  --color-beige: #f2d9b8;
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+/* Small tracked mono label -- used for tags, categories, and stamps */
+.field-stamp {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Pill-style badge -- structured-portfolio accent tag */
+.badge {
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
+  border-radius: 0.4rem;
+}
+
+/* One smooth ambient wash from the top -- no corner spotlights, no plum undertone */
+.hero-glow {
+  background:
+    radial-gradient(ellipse 90% 55% at 50% -10%, var(--color-glow-teal), transparent 65%),
+    linear-gradient(180deg, #10181c 0%, var(--color-bg) 55%, #0a0f11 100%);
+}
+
+/* Dark scrim over the hero photo -- keeps headline legible, blends into the page bg below */
+.hero-photo-scrim {
+  background: linear-gradient(
+    180deg,
+    rgba(13, 20, 23, 0.25) 0%,
+    rgba(13, 20, 23, 0.35) 40%,
+    var(--color-bg) 100%
+  );
+}
+
+/* Scroll-reveal: used by <Reveal> -- fades and lifts content into place once */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Slow, subtle zoom for static hero imagery -- settles on the zoomed-in frame */
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate(-1%, -1%);
+  }
+}
+.animate-kenburns {
+  animation: kenburns 20s ease-out forwards;
+}
+
+/* Gentle nudge on the hero's scroll cue -- stops for prefers-reduced-motion below */
+@keyframes scroll-cue-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+.animate-scroll-cue {
+  animation: scroll-cue-bounce 2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-cue {
+    animation: none;
+  }
+}

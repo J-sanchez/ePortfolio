@@ -1,99 +1,41 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+import Reveal from './Reveal';
+import caseStudies from '../data/caseStudies';
 
 const Portfolio = () => {
-	return (
-		<section className=" text-white px-8 md:px-16 min-h-screen relative">
-			{/* Heading */}
-			<h1 className="text-4xl font-semibold text-left mb-12 text-white">
-				My Journey
-			</h1>
+  return (
+    <section className="text-text px-6 md:px-10 py-16 md:py-24">
+      <div className="max-w-6xl mx-auto">
+        <Reveal>
+          <span className="badge text-xs mb-3">Selected Work</span>
+          <h2 className="font-display font-semibold text-4xl md:text-5xl text-text mb-12 md:mb-16 mt-3">
+            Case Studies
+          </h2>
+        </Reveal>
 
-			{/* Container with responsive flex layout */}
-			<div className="max-w-6xl mx-auto space-y-16">
-				<div
-					className="flex flex-col lg:flex-row items-center justify-between bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transform hover:scale-105 transition duration-300"
-					onClick={() => (window.location.href = '/workexperience')}
-				>
-					<img
-						src="office.png"
-						alt="Work Experience Icon"
-						className="w-1/3 h-auto object-cover"
-					/>
-					<div className="p-6 flex-1">
-						<h2 className="text-2xl font-semibold text-emerald-600">
-							Work Experience
-						</h2>
-						<p className="text-gray-600 mt-2">
-                        View my work experience, projects, and skills.
-						</p>
-					</div>
-				</div>
-
-				{/* School Card */}
-				<div
-					className="flex flex-col lg:flex-row items-center justify-between bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transform hover:scale-105 transition duration-300"
-					onClick={() => (window.location.href = '/education')}
-				>
-					<img
-						src="school.png"
-						alt="School Icon"
-						className="w-1/3 h-auto object-cover"
-					/>
-					<div className="p-6 flex-1">
-						<h2 className="text-2xl font-semibold text-emerald-600">
-							Education
-						</h2>
-						<p className="text-gray-600 mt-2">
-							Learn more about my academic background, achievements, and
-							educational journey.
-						</p>
-					</div>
-				</div>
-
-				{/* Software Development Card */}
-				<div
-					className="flex flex-col lg:flex-row items-center justify-between bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transform hover:scale-105 transition duration-300"
-					onClick={() => (window.location.href = '/software-dev')}
-				>
-					<img
-						src="sd.png"
-						alt="Software Development Icon"
-						className="w-1/3 h-auto object-cover"
-					/>
-					<div className="p-6 flex-1">
-						<h2 className="text-2xl font-semibold text-emerald-600">
-							Software Development
-						</h2>
-						<p className="text-gray-600 mt-2">
-							Explore my projects, skills, and experience in software
-							development.
-						</p>
-					</div>
-				</div>
-
-				{/* Project Management Card */}
-				<div
-					className="flex flex-col lg:flex-row items-center justify-between bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transform hover:scale-105 transition duration-300"
-					onClick={() => (window.location.href = '/project-management')}
-				>
-					<img
-						src="pm.png"
-						alt="Project Management Icon"
-						className="w-1/3 h-auto object-cover"
-					/>
-					<div className="p-6 flex-1">
-						<h2 className="text-2xl font-semibold text-emerald-600">
-							Project Management
-						</h2>
-						<p className="text-gray-600 mt-2">
-							See how I manage 13 Web Applications as a Service Owner in an
-							Agile environment.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-	);
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {caseStudies.map((study, i) => (
+            <Reveal key={study.slug} delay={i * 80}>
+              <Link
+                to={`/work/${study.slug}`}
+                className="group block bg-surface border border-border rounded-xl p-8 h-full transition-colors duration-300 hover:border-accent"
+              >
+                <span className="badge text-[11px] mb-3">
+                  Case {study.number}
+                </span>
+                <h3 className="font-display font-semibold text-3xl text-text mb-3 transition-colors duration-300 group-hover:text-accent">
+                  {study.title}
+                </h3>
+                <p className="text-lg text-text-muted leading-relaxed">
+                  {study.tagline}
+                </p>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Portfolio;

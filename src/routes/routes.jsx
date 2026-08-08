@@ -1,25 +1,16 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import HomePage from '../pages/Home/Home'; // Import HomePage
-// import AboutPage from '../pages/About/About'; // Import AboutPage
+import HomePage from '../pages/Home/Home';
 import Education from '../pages/school/School';
-import ProjectManagerExperience from '../pages/project/PM';
-import Dev from '../pages/dev/SoftwareDev';
-import WorkExperience from '../pages/Work/workexperience';
+import CaseStudy from '../pages/CaseStudy/CaseStudy';
+import Resume from '../pages/Resume/Resume';
 
 const AppRoutes = () => {
 	return (
 		<Routes>
-			{' '}
-			{/* Use Routes instead of Switch */}
-			<Route path="/" element={<HomePage />} />{' '}
-			{/* Use 'element' prop instead of 'component' */}
-            {/* <Route path="/about" element={<AboutPage />} /> */}
-            
-            <Route path="/education" element={<Education />} />
-            <Route path="/project-management" element={<ProjectManagerExperience />} />
-            <Route path="/software-dev" element={<Dev />} />
-            <Route path="/workexperience" element={<WorkExperience />} />
+			<Route path="/" element={<HomePage />} />
+			<Route path="/education" element={<Education />} />
+			<Route path="/work/:slug" element={<CaseStudy />} />
+			<Route path="/resume" element={<Resume />} />
 		</Routes>
 	);
 };

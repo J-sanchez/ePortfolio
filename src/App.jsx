@@ -1,16 +1,15 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import AppRoutes from './routes/routes';
-import Hero from './components/Hero';
 import Header from './pages/Header/Header';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 	return (
 		<Router>
-			{' '}
-			{/* BrowserRouter should wrap everything */}
-            <div>
-                <Header />
+			<ScrollToTop />
+			<div>
+				<Header />
 				<AppRoutes />
 			</div>
 		</Router>

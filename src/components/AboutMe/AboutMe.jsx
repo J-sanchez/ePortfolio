@@ -1,54 +1,71 @@
-import React from 'react';
-import AboutMePhotos from './AboutMePhotos'; // Assuming you have this component
+import Reveal from '../Reveal';
+import PhotoAccent from '../PhotoAccent';
+
+const Em = ({ children }) => (
+  <strong className="font-semibold italic text-beige">{children}</strong>
+);
 
 const AboutMe = () => {
-  
-    return (
-        <section className=" text-white px-8 md:px-16 min-h-screen relative items-center justify-evenly">
-            <h1 className="text-4xl pt-16 -mb-12 font-semibold text-left text-white">About Me</h1>
-      {/* Container with responsive grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-        
-                {/* Left Side - Image Slider */}
-                <div className='w-11/12'>
-        <div className="mt-32 w-full">
-          <AboutMePhotos />
-                    </div>
-                    </div>
+  return (
+    <section id="about" className="text-text px-6 md:px-10 py-16 md:py-24 scroll-mt-24">
+      <div className="max-w-6xl mx-auto">
+        <Reveal>
+          <span className="badge text-xs mb-4">About</span>
+          <h2 className="font-display font-semibold text-4xl md:text-5xl text-text mb-4 mt-3">
+            How I Got Here
+          </h2>
+          <p className="font-display italic text-xl md:text-2xl text-text-muted mb-12">
+            People, code, and the outdoors.
+          </p>
+        </Reveal>
 
-        {/* Right Side - Text Content */}
-        <div className="text-center md:text-left">
-  {/* Name */}
-  <h2 className="text-4xl font-semibold mb-4 text-emerald-600">
-    Hi there!
-  </h2>
+        <div className="flex flex-col md:flex-row gap-10 md:gap-12">
+          <div className="flex-1 max-w-3xl space-y-5 text-lg md:text-xl text-text-muted leading-relaxed">
+            <Reveal as="p" delay={0}>
+              <Em>The Start.</Em> I began at LANL in the field, tracking
+              waste and environmental data with paper, pen, and filing
+              cabinets. That work turned into published research and a
+              career building the software that replaced those cabinets.
+            </Reveal>
+            <Reveal as="p" delay={40}>
+              <Em>The People.</Em> I like solving problems alongside the
+              people who live with them: SMEs, vendors, and the same Scrum
+              Team I have led for years. The win I remember most is my team
+              hitting a deadline nobody thought was realistic.
+            </Reveal>
+            <Reveal as="p" delay={120}>
+              <Em>Now.</Em> I run EPC&apos;s Software Portfolio at LANL,
+              spanning environmental compliance, AI, and Agile program
+              management. The newest piece is an AI compliance assistant
+              built on <Em>Claude API</Em> and a{' '}
+              <Em>RAG pipeline with vector search</Em>, currently in
+              testing. (More on the scale of what I run in the case studies
+              below.)
+            </Reveal>
+            <Reveal as="p" delay={200}>
+              <Em>Outside.</Em> I am hiking, off-roading through northern
+              New Mexico, or training for the next 5k. That is usually
+              where the next idea shows up.
+            </Reveal>
+          </div>
 
-  {/* First Description */}
-  <p className="text-xl mb-4 leading-relaxed">
-    My name is <span className="font-bold text-emerald-600">Jonathan C. Sanchez</span>. I am an enthusiastic and driven individual with a background in Computer Science, Math, Environmental Compliance, and Project Management. Over the past 7 years, I have worked at the Los Alamos National Laboratory, where I have had the opportunity to collaborate with dedicated and knowledgeable individuals. This experience has shaped my passion for ensuring environmental regulations are met while driving efficient, sustainable solutions.
-  </p>
+          <PhotoAccent
+            name="photo-waterfall"
+            alt="A small waterfall running over mossy rocks in a forest"
+            aspect="aspect-[3/4]"
+            delay={240}
+            className="w-full md:w-72 lg:w-80 shrink-0"
+          />
+        </div>
 
-  {/* Second Description */}
-  <p className="text-xl mb-4 leading-relaxed">
-    Throughout my career, I have developed skills and knowledge in Environmental Compliance, Agile Scrum, Software Development, Project Management, Data Analysis, and more. I have demonstrated resilience, efficiency, and results in various roles and I am always learning and expanding my skill set, whether it is through my job, personal projects, coursework, or certifications. I thrive in team environments, enjoy tackling complex challenges, and take pride in what I do. 
-  </p>
-
-  {/* Closing Description */}
-  <p className="text-xl mt-4 mb-4 leading-relaxed">Thank you!</p>
-
-  {/* Signature */}
-  <p className="text-2xl font-semibold mb-4">Jonathan C. Sanchez</p>
-
-  {/* Final Message */}
-  <p className="text-xl leading-relaxed">
-    I’m excited about continuing to learn, grow and take on new opportunities, both personally and professionally!
-  </p>
-</div>
-
+        <Reveal delay={100} className="mt-14">
+          <p className="field-stamp text-base text-accent">
+            Still building. Still outside.
+          </p>
+        </Reveal>
       </div>
     </section>
   );
 };
 
 export default AboutMe;
-

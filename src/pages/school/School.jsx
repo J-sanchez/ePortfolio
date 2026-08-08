@@ -1,107 +1,131 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+import Reveal from '../../components/Reveal';
+import PhotoAccent from '../../components/PhotoAccent';
 
 const education = [
   {
-    title: "Southern New Hampshire University (SNHU)",
-    course_name: "Computer Science",
-    date: "2023 - 2025",
+    title: 'Southern New Hampshire University',
+    course_name: 'B.S. Computer Science',
     details: [
-      "At Southern New Hampshire University (SNHU), I strengthened my skills in Software Design, Agile Scrum methodologies, UI/UX principles, and overall software development.",
-      "I gained experience in software architecture, database design, and API development, equipping me with a well-rounded understanding of building scalable, efficient, and user-centered applications."
-    ]
+      'Focused on software design, Agile Scrum methodologies, UI/UX principles, and full software development.',
+      'Built a foundation in software architecture, database design, and API development for scalable, user-centered applications.',
+    ],
   },
   {
-    title: "University of New Mexico",
-    course_name: "Math & Computer Science",
-    date: "2022 - 2023",
+    title: 'University of New Mexico',
+    course_name: 'Math & Computer Science',
     details: [
-      "At the University of New Mexico, my coursework focused on Math, Physics, Algorithms, and Logic, which honed my analytical thinking and problem-solving abilities."
-    ]
+      'Coursework in math, physics, algorithms, and logic that sharpened my analytical thinking and problem-solving.',
+    ],
   },
   {
-    title: "Adams State University",
-    course_name: "Applied Mathematical Sciences",
-    date: "2018 - 2021",
+    title: 'Adams State University',
+    course_name: 'Applied Mathematical Sciences',
     details: [
-      "At Adams State University, I built the foundation of my Computer Science studies while balancing the demands of playing college baseball. This taught me discipline, teamwork, and resilience, which have shaped my academic journey.",
-      "Though my time at Adams State was challenging, it was crucial for developing my adaptability, communication skills, and personal growth."
-    ]
+      'Built the foundation of my computer science studies while playing college baseball, balancing both with discipline and time management.',
+    ],
   },
   {
-    title: "University of Arizona",
-    course_name: "Certificate - Fullstack Web Development",
-    date: "2020 - 2021",
+    title: 'University of Arizona',
+    course_name: 'Certificate: Full-Stack Web Development',
     details: [
-      "The Fullstack Web Development Bootcamp at the University of Arizona equipped me with hands-on experience in both front-end and back-end technologies, including HTML, CSS, JavaScript, React, and Node.js.",
-      "The fast-paced curriculum and collaborative projects helped me strengthen my coding skills, preparing me to build dynamic, full-featured web applications from scratch."
-    ]
+      'A fast-paced bootcamp in front-end and back-end development (HTML, CSS, JavaScript, React, and Node.js) through collaborative projects.',
+    ],
   },
   {
-    title: "University of New Mexico",
-    course_name: "Certificate - Emergency Medical Technician (EMT)",
-    date: "2017",
+    title: 'University of New Mexico',
+    course_name: 'Certificate: Emergency Medical Technician (EMT)',
     details: [
-      "I earned my EMT certificate at the University of New Mexico, gaining invaluable life-saving skills and the ability to manage high-pressure situations.",
-      "This course emphasized quick decision-making, critical thinking, and staying calm under stress, improving my performance in challenging environments."
-    ]
+      'Trained in life-saving skills and high-pressure decision-making.',
+    ],
   },
   {
-    title: "Santa Fe Community College",
-    course_name: "Certificate - Engineering Tech 1/2",
-    date: "2015",
+    title: 'Santa Fe Community College',
+    course_name: 'Certificate: Engineering Tech I/II',
     details: [
-      "At Santa Fe Community College, I trained to become a certified Engineering Technician, gaining hands-on technical skills in engineering principles and tools.",
-      "Through mock interviews for Los Alamos National Laboratory, I developed valuable real-world interviewing skills, strengthening both my technical and communication abilities."
-    ]
-  }
+      'Trained as a certified Engineering Technician, with hands-on coursework in engineering principles and tools.',
+    ],
+  },
 ];
 
 const accolades = [
-  "STEM Program (2014)",
-  "Bridge to Success Program (2015)",
-  "Volunteer Firefighter (2017)",
-  "2 SPOT Awards",
-  "National Honor Society",
-  "80+ GitHub Repositories / Projects",
-  "Alpaca API Algorithmic Trading Bot",
-  "Research in Machine Learning",
-  "Research in Green Technology",
-  "Collegiate Athlete"
+  'STEM Program',
+  'Bridge to Success Program',
+  'Volunteer Firefighter',
+  '2 SPOT Awards',
+  'National Honor Society',
+  '80+ GitHub Repositories / Projects',
+  'Alpaca API Algorithmic Trading Bot',
+  'Research in Machine Learning',
+  'Research in Green Technology',
+  'Collegiate Athlete',
 ];
 
 const Education = () => {
-    return (
-      <section className="bg-gradient-to-b from-emerald-950 to-slate-900 text-white px-8 md:px-16 min-h-screen relative py-12">
-        <h2 className="text-4xl font-semibold text-white mt-12 mb-12 text-left">Education & Accolades</h2>
-        
-        {/* Education Section */}
-        <div className="max-w-6xl mx-auto space-y-8">
-          {education.map((item, index) => (
-            <div key={index} className="border-b border-white pb-6">
-              <h3 className="text-2xl font-semibold text-emerald-600 mb-2">{item.title}</h3>
-              <p className="text-lg font-semibold text-white mb-2">{item.course_name} <span className="text-sm text-white">{item.date}</span></p>
-              <ul className="text-white list-disc pl-5 space-y-2">
+  return (
+    <div className="relative z-0 bg-bg">
+      <div className="fixed inset-0 -z-10 hero-glow pointer-events-none" aria-hidden="true" />
+      <section className="relative min-h-screen text-text px-6 md:px-10 pt-32 pb-24 md:pb-32">
+      <div className="max-w-6xl mx-auto">
+        <Link
+          to="/"
+          className="field-stamp inline-block text-xs text-text-muted hover:text-accent transition-colors duration-200 mb-10"
+        >
+          ← Back to Home
+        </Link>
+
+        <span className="badge text-xs mb-4">Log 02</span>
+        <h1 className="font-display font-semibold text-4xl md:text-6xl text-text mb-4 mt-3">
+          Education & Accolades
+        </h1>
+        <p className="text-text-muted text-lg md:text-xl max-w-2xl mb-10">
+          Computer Science, Mathematics, and the coursework behind the
+          compliance software and AI work.
+        </p>
+
+        <PhotoAccent
+          name="photo-glacier"
+          alt="A glacier flowing between mountains under a moody sky"
+          aspect="aspect-[21/9]"
+          delay={30}
+          className="mb-16"
+        />
+
+        <div className="space-y-6 mb-20">
+          {education.map((item, i) => (
+            <Reveal
+              key={item.title}
+              delay={Math.min(i, 4) * 70}
+              className="bg-surface border border-border rounded-xl p-8"
+            >
+              <h3 className="font-display font-semibold text-2xl md:text-3xl text-text mb-1">
+                {item.title}
+              </h3>
+              <p className="field-stamp text-xs text-accent mb-5">
+                {item.course_name}
+              </p>
+              <ul className="space-y-3 text-text-muted leading-relaxed list-disc marker:text-accent pl-5">
                 {item.details.map((detail, idx) => (
                   <li key={idx}>{detail}</li>
                 ))}
               </ul>
-            </div>
+            </Reveal>
           ))}
         </div>
-  
-        {/* Accolades Section */}
-        <div className="mt-12 flex justify-center">
-          <div className="text-left">
-            <h3 className="text-2xl font-semibold text-white mb-4">Accolades</h3>
-            <ul className="text-white text-lg list-disc pl-5 space-y-2 inline-block text-left">
-              {accolades.map((accolade, index) => (
-                <li key={index}>{accolade}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
+
+        <Reveal>
+          <span className="badge text-xs mb-4">Accolades</span>
+          <h2 className="font-display font-semibold text-3xl md:text-4xl text-text mb-8 mt-3">
+            Along the Way
+          </h2>
+          <p className="text-text-muted text-base md:text-lg leading-relaxed">
+            {accolades.join('  ·  ')}
+          </p>
+        </Reveal>
+      </div>
       </section>
-    );
-  };
+    </div>
+  );
+};
 
 export default Education;
