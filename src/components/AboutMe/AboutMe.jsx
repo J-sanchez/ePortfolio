@@ -43,8 +43,8 @@ const AboutMe = () => {
               below.)
             </Reveal>
             <Reveal as="p" delay={200}>
-              <Em>Outside.</Em> I am hiking, off-roading through northern
-              New Mexico, or training for the next 5k. That is usually
+              <Em>Outside.</Em> I am hiking or off-roading through
+              northern New Mexico as often as I can. That is usually
               where the next idea shows up.
             </Reveal>
           </div>

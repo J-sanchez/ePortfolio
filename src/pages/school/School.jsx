@@ -99,10 +99,10 @@ const Education = () => {
               className="bg-surface border border-border rounded-xl p-8"
             >
               <h3 className="font-display font-semibold text-2xl md:text-3xl text-text mb-1">
-                {item.title}
+                {item.course_name}
               </h3>
               <p className="field-stamp text-xs text-accent mb-5">
-                {item.course_name}
+                {item.title}
               </p>
               <ul className="space-y-3 text-text-muted leading-relaxed list-disc marker:text-accent pl-5">
                 {item.details.map((detail, idx) => (
