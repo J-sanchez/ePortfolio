@@ -119,6 +119,9 @@ const skillGroups = [
       'Oracle APEX',
       'ArcGIS',
       'Digital Ocean',
+      'AWS RDS',
+      'PostgreSQL',
+      'Prisma',
       'Integrify',
       'Jira',
       'Confluence',
@@ -172,6 +175,11 @@ const supportingProjects = [
     title: 'BST Traversal Tool',
     summary:
       'Full-stack visualization tool (Express backend, React/react-d3-tree frontend) implementing pre-order, in-order, and post-order traversal algorithms as a REST API, rendering results as interactive tree diagrams.',
+  },
+  {
+    title: 'BuildRight',
+    summary:
+      'Full-stack quoting tool for contractors (Express/TypeScript backend, React/TypeScript frontend) using the Claude API to generate structured quotes from a guided intake flow, with AWS RDS (PostgreSQL via Prisma) powering a multi-tenant contractor/client/job data model. Pre-launch.',
   },
 ];
 
