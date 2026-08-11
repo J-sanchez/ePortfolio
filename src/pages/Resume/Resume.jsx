@@ -38,7 +38,7 @@ const jobs = [
       },
     ],
     programManagement: [
-      "Budget & Resource Management: Indirectly manage a $1.3M annual budget for EPC's Agile Scrum Team (developers and analysts) and support the ECMS project, a six-year effort (~$9M cumulative, a clean estimate) across 20+ swimlanes annually, contributing as a technical project team member and overseeing software implementation.",
+      "Budget & Resource Management: Indirectly manage a $1.3M annual budget for EPC's Agile Scrum Team and support the six-year, $9M ECMS project across 20+ swimlanes annually.",
       'System Integration: Direct development of 9 API integrations connecting ECMS with tools like ArcGIS, IRT, and EDRMS to enhance compliance tracking and transparency.',
       'Cross-Functional Coordination: Collaborate with stakeholders across the division (ADS, OSH, NPI, WM) and external consultants to ensure smooth implementation and system alignment.',
       'Cost Optimization: Delivered a proof-of-concept application projected to save LANL $140,000 in its first year by eliminating roughly 100 redundant software licenses ($1,400/license).',
