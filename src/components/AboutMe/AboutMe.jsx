@@ -29,23 +29,22 @@ const AboutMe = () => {
             </Reveal>
             <Reveal as="p" delay={40}>
               <Em>The People.</Em> I like solving problems alongside the
-              people who live with them: SMEs, vendors, and the same Scrum
-              Team I have led for years. The win I remember most is my team
-              hitting a deadline nobody thought was realistic.
+              people who live with them: SMEs, stakeholders, and the same Scrum
+              Team I have supported for years. The most memorable wins are when my team
+              hits a deadline nobody thought was realistic.
             </Reveal>
             <Reveal as="p" delay={120}>
               <Em>Now.</Em> I run EPC&apos;s Software Portfolio at LANL,
               spanning environmental compliance, AI, and Agile program
               management. The newest piece is an AI compliance assistant
-              built on <Em>Claude API</Em> and a{' '}
-              <Em>RAG pipeline with vector search</Em>, currently in
-              testing. (More on the scale of what I run in the case studies
+              built to leverage <Em>Claude API</Em> and a{' '}
+              <Em>RAG pipeline with vector search</Em>, currently being staged for release. (More on the scale of what I run in the case studies
               below.)
             </Reveal>
             <Reveal as="p" delay={200}>
-              <Em>Outside.</Em> I am hiking or off-roading through
-              northern New Mexico as often as I can. That is usually
-              where the next idea shows up.
+              <Em>Outside.</Em> When I am not at work, I am traveling, working on my family&apos;s property, hiking, or off-roading through
+              northern New Mexico. That is usually
+              where the next idea or solution shows up.
             </Reveal>
           </div>
 

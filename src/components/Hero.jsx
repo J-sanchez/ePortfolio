@@ -28,7 +28,7 @@ const Hero = () => {
         className="relative max-w-6xl mx-auto w-full px-6 md:px-10"
       >
         <h1 className="font-display font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-text max-w-none">
-          Hi there, I am Jonathan.
+          Hi there, I am Jonathan!
         </h1>
         <p className="mt-8 max-w-2xl text-lg md:text-xl text-text-muted leading-relaxed">
           I run the{' '}

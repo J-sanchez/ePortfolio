@@ -12,7 +12,7 @@ const Header = () => {
 								Jonathan Sanchez
 							</span>
 							<span className="field-stamp block text-[10px] text-text-muted mt-1">
-								Product Owner, Project Lead, & [TBD]
+								Product Owner & Project Lead
 							</span>
 						</Link>
 					</div>
