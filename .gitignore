@@ -18,6 +18,9 @@ lerna-debug.log*
 # Local tool config
 .claude/
 
+# Wrangler local state
+.wrangler/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
