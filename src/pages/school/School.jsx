@@ -20,7 +20,7 @@ const education = [
   },
   {
     title: 'Adams State University',
-    course_name: 'Applied Mathematical Sciences',
+    course_name: 'A.S. Applied Mathematical Sciences',
     details: [
       'Built the foundation of my computer science studies while playing college baseball, balancing both with discipline and time management.',
     ],
