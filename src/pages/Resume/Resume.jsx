@@ -21,7 +21,7 @@ const jobs = [
           'Architected and developed a full-stack AI application using FastAPI, React, TypeScript, and Claude API integration, implementing a RAG system with a FAISS vector store for semantic search across environmental procedures.',
           'Integrated the Electronic Code of Federal Regulations (eCFR) XML feed, giving users the ability to ask specific regulatory questions against the most current federal compliance data.',
           "Designed a dual-prompt architecture (Analysis vs. Comparison modes) with configurable system prompts and context management to optimize Claude's responses for environmental compliance queries.",
-          'Implemented E2E Playwright testing and security review to meet production reliability standards for deployment on a classified network.',
+          'Implemented E2E Playwright testing and security review to meet production reliability standards for deployment on a secure network.',
         ],
         link: 'epc-ai-compliance-assistant',
       },

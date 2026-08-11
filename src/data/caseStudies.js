@@ -24,20 +24,20 @@ const caseStudies = [
     tagline:
       "Leading the six-year modernization of LANL's environmental compliance system, off legacy Access databases and onto a unified platform.",
     problem:
-      "LANL's environmental compliance tracking was split across 8 separate programs running on legacy Access databases, with no unified system connecting compliance data to the tools that depend on it: GIS, records management, incident tracking. That fragmentation made reporting harder and left the software budget carrying redundant licenses.",
+      "LANL's environmental compliance tracking was split across 3 groups, each running its own siloed processes and databases, with no unified system connecting compliance data to the tools that depend on it. That fragmentation made reporting harder and left the institution exposed to audit and compliance risk.",
     approach: [
-      'Led the rollout of a commercial Compliance Management System (ECMS) for Environmental Stewardship, migrating 8 programs off legacy Access databases.',
-      'Directed development of 9 API integrations connecting ECMS to ArcGIS, IRT, and EDRMS, building the ArcGIS integration myself.',
+      'Led and supported the rollout of the Environmental Compliance Management System (ECMS) for the Environmental Protection and Compliance Division, migrating 8 Access databases and numerous manual processes.',
+      'Directed development of 9 API integrations enabling two-way data flow between ECMS and other institutional systems across the division.',
       "Manage a $1.3M annual budget for EPC's Agile Scrum Team and support the broader six-year ECMS program, roughly $1.3M–$1.5M a year in contractor and developer funding (~$9M cumulative, a clean estimate), across 20+ implementation swimlanes a year.",
       'Coordinate across ADS, OSH, NPI, and WM divisions plus external consultants to keep implementation and system alignment on track.',
       'Delivered a proof-of-concept application projected to save LANL $140,000 in its first year by eliminating roughly 100 redundant software licenses.',
       'Stepped into the lead role over the past year, after supporting ECMS in a junior PM capacity while also serving as Product Owner of the Scrum Team.',
     ],
     result:
-      'Eight programs off Access, six legacy databases retired, nine integrations delivered, and a proof-of-concept projected to save six figures in its first year.',
+      'Eight Access databases retired, nine integrations delivered, and a proof-of-concept projected to save six figures in its first year, all while keeping the broader division-wide program on track.',
     stats: [
-      { value: 8, suffix: '', label: 'Programs migrated off Access' },
-      { value: 6, suffix: '', label: 'Legacy databases retired' },
+      { value: 20, suffix: '+', label: 'Swimlanes/year' },
+      { value: 8, suffix: '', label: 'Access databases migrated' },
       { value: 9, suffix: '', label: 'API integrations delivered' },
       { value: 140, prefix: '$', suffix: 'K', label: 'Projected first-year savings' },
     ],
@@ -51,15 +51,15 @@ const caseStudies = [
     role: 'Product Owner & Project Lead | AI Products Portfolio',
     period: '2024 – Present',
     tagline:
-      'A RAG-powered assistant that gives compliance staff fast, defensible answers against live federal regulations, built and security-cleared for a classified network.',
+      'A RAG-powered assistant that gives compliance staff fast, defensible answers against live federal regulations, built and security cleared for a secure network.',
     problem:
-      "EPC's compliance staff needed fast, reliable answers to environmental regulatory questions, both against internal procedures and the Electronic Code of Federal Regulations (eCFR), which changes over time. Manual research was slow, and any AI tool touching this workflow had to clear a strict security review before it could run on a classified network.",
+      "EPC's compliance staff needed fast, reliable answers to environmental regulatory questions, both against internal procedures and the Electronic Code of Federal Regulations (eCFR), which changes over time. Manual research was slow, and any AI tool touching this workflow had to clear a strict security review before it could run on a secure network.",
     approach: [
       'Architected and built a full-stack application: FastAPI backend, React/TypeScript frontend, Claude API integration.',
       'Built the core workflow around uploaded procedures: users upload one or more procedures for the app to analyze individually or compare against each other, powered by a RAG pipeline with a FAISS vector store for semantic search.',
       'Built a separate chat page where users reference their selected procedure(s) directly and ask questions against the eCFR, backed by a live XML integration so answers reflect current federal regulations, not a stale snapshot.',
       'Designed a dual-prompt architecture, separate Analysis and Comparison modes, with configurable system prompts and context management tuned for compliance-specific queries.',
-      'Implemented end-to-end Playwright testing and carried the app through security review to meet the standard required for deployment on a classified network.',
+      'Implemented end-to-end Playwright testing and carried the app through security review to meet the standard required for deployment on a secure network.',
     ],
     result:
       'Currently in active testing with EPC staff ahead of full rollout, positioned as a complementary tool for compliance staff rather than a replacement for their judgment.',
