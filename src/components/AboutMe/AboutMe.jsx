@@ -36,8 +36,8 @@ const AboutMe = () => {
             <Reveal as="p" delay={120}>
               <Em>Now.</Em> I run EPC&apos;s Software Portfolio at LANL,
               spanning environmental compliance, AI, and Agile program
-              management. The newest piece is an AI compliance assistant
-              built to leverage <Em>Claude API</Em> and a{' '}
+              management. The newest effort is an AI compliance assistant
+              built to leverage <Em>Claude&apos;s API</Em> and a{' '}
               <Em>RAG pipeline with vector search</Em>, currently being staged for release. (More on the scale of what I run in the case studies
               below.)
             </Reveal>
