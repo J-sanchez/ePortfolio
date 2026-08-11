@@ -34,7 +34,7 @@ const caseStudies = [
       'Stepped into the lead role over the past year, after supporting ECMS in a junior PM capacity while also serving as Product Owner of the Scrum Team.',
     ],
     result:
-      'Eight Access databases retired, nine integrations delivered, and a proof-of-concept projected to save six figures in its first year, all while keeping the broader division-wide program on track.',
+      'Eight Access databases retired, nine integrations delivered, and a proof-of-concept projected to save six figures in its first year, all while keeping the broader division wide portfolio on track.',
     stats: [
       { value: 20, suffix: '+', label: 'Swimlanes/year' },
       { value: 8, suffix: '', label: 'Access databases migrated' },
@@ -59,7 +59,8 @@ const caseStudies = [
       'Built the core workflow around uploaded procedures: users upload one or more procedures for the app to analyze individually or compare against each other, powered by a RAG pipeline with a FAISS vector store for semantic search.',
       'Built a separate chat page where users reference their selected procedure(s) directly and ask questions against the eCFR, backed by a live XML integration so answers reflect current federal regulations, not a stale snapshot.',
       'Designed a dual-prompt architecture, separate Analysis and Comparison modes, with configurable system prompts and context management tuned for compliance-specific queries.',
-      'Implemented end-to-end Playwright testing and carried the app through security review to meet the standard required for deployment on a secure network.',
+      'Added request rate limiting and built topic relevance guardrails so the chatbot could detect and reject off-scope questions, hardening the application for deployment on a secure network.',
+      'Built E2E test coverage with Playwright to validate reliability before releases to the secure-network environment.',
     ],
     result:
       'Currently in active testing with EPC staff ahead of full rollout, positioned as a complementary tool for compliance staff rather than a replacement for their judgment.',
@@ -87,7 +88,7 @@ const caseStudies = [
       'Integrated with the Jira REST API and built a custom storage layer for historical sprint data, enabling trend analysis across a rolling 50-sprint lookback.',
     ],
     result:
-      "In daily use as the tool for managing EPC's 12-application portfolio as Product Owner: ECMS, WCTS, RFA, WATS, RUA, MSGP-CAR, NDA, WSSA, PRS, Weather Machine, and Lab Pack, among others.",
+      "In daily use as the tool for managing EPC's 12-application portfolio as Product Owner: ECMS, WCTS, RFA, WATS, RUA, MSGP-CAR, NDA, WSSA, PRS, Weather Machine, and Lab Pack, among others — cutting manual backlog review by ~3 hours per sprint and enabling faster status updates to stakeholders without pinging developers directly.",
     stats: [
       { value: 50, suffix: '', label: 'Sprint rolling lookback' },
       { value: 12, suffix: '+', label: 'Apps in the portfolio it tracks' },

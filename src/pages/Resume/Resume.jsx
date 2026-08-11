@@ -21,7 +21,8 @@ const jobs = [
           'Architected and developed a full-stack AI application using FastAPI, React, TypeScript, and Claude API integration, implementing a RAG system with a FAISS vector store for semantic search across environmental procedures.',
           'Integrated the Electronic Code of Federal Regulations (eCFR) XML feed, giving users the ability to ask specific regulatory questions against the most current federal compliance data.',
           "Designed a dual-prompt architecture (Analysis vs. Comparison modes) with configurable system prompts and context management to optimize Claude's responses for environmental compliance queries.",
-          'Implemented E2E Playwright testing and security review to meet production reliability standards for deployment on a secure network.',
+          'Added request rate limiting and built topic relevance guardrails so the chatbot could detect and reject off-scope questions, hardening the application for deployment on a secure network.',
+          'Built E2E test coverage with Playwright to validate reliability before releases to the secure-network environment.',
         ],
         link: 'epc-ai-compliance-assistant',
       },
@@ -31,17 +32,17 @@ const jobs = [
           'Built an automated sprint analysis system using the Claude API to extract key decisions, identify risks, and flag duplicate work across agile development cycles.',
           'Implemented ML/NLP duplicate detection using TF-IDF vectorization and cosine similarity (scikit-learn), rather than simple keyword matching.',
           'Integrated with the Jira REST API and built a custom storage layer for historical sprint data, enabling trend analysis across a rolling 50-sprint lookback.',
-          "Use daily as Product Owner to manage EPC's portfolio of 12 applications.",
+          "Use daily to track EPC's 12-application portfolio, cutting manual backlog review by ~3 hours per sprint and enabling faster status updates to stakeholders without pinging developers directly.",
         ],
         link: 'ai-sprint-executive',
       },
     ],
     programManagement: [
       "Budget & Resource Management: Indirectly manage a $1.3M annual budget for EPC's Agile Scrum Team (developers and analysts) and support the ECMS project, a six-year effort (~$9M cumulative, a clean estimate) across 20+ swimlanes annually, contributing as a technical project team member and overseeing software implementation.",
-      'System Integration: Directed development of 9 API integrations connecting ECMS with tools like ArcGIS, IRT, and EDRMS to enhance compliance tracking and transparency.',
+      'System Integration: Direct development of 9 API integrations connecting ECMS with tools like ArcGIS, IRT, and EDRMS to enhance compliance tracking and transparency.',
       'Cross-Functional Coordination: Collaborate with stakeholders across the division (ADS, OSH, NPI, WM) and external consultants to ensure smooth implementation and system alignment.',
       'Cost Optimization: Delivered a proof-of-concept application projected to save LANL $140,000 in its first year by eliminating roughly 100 redundant software licenses ($1,400/license).',
-      'Process Improvement: Supported process automation initiatives using Integrify, improving workflows across multiple teams.',
+      'Process Improvement: Support process automation initiatives using Integrify, improving workflows across multiple teams.',
       'Stakeholder Communication: Provide regular updates to stakeholders, addressing risks, progress, and project changes proactively.',
     ],
     programManagementLink: 'ecms-modernization',
@@ -104,23 +105,23 @@ const skillGroups = [
   },
   {
     label: 'Programming Languages',
-    items: ['Python', 'JavaScript', 'TypeScript', 'HTML/CSS', 'SQL', 'Java', 'C++', 'C#'],
+    items: ['Python', 'JavaScript', 'TypeScript', 'HTML/CSS', 'SQL', 'Java'],
   },
   {
     label: 'Tools & Technologies',
     items: [
+      'FastAPI',
+      'React',
+      'Node',
+      'GitHub',
+      'Postman',
+      'Streamlit',
+      'Oracle APEX',
+      'ArcGIS',
+      'Digital Ocean',
+      'Integrify',
       'Jira',
       'Confluence',
-      'ArcGIS',
-      'Integrify',
-      'Oracle APEX',
-      'Postman',
-      'GitHub',
-      'FastAPI',
-      'Streamlit',
-      'Node',
-      'React',
-      'Digital Ocean',
       'Microsoft Office Suite',
     ],
   },
@@ -151,7 +152,6 @@ const accolades = [
   'Volunteer Firefighter',
   '80+ GitHub Repositories',
   'Research in Machine Learning and Green Technology',
-  'Published Research in MIRROR Magazine',
   'National Honor Society',
   'Collegiate Baseball Player',
 ];
@@ -206,7 +206,7 @@ const Resume = () => {
             Product Owner & Project Lead | Environmental Compliance Systems
           </p>
           <p className="field-stamp text-xs text-accent">
-            (505) 929-3436 &nbsp;·&nbsp; jcsanchez@lanl.gov &nbsp;·&nbsp; github.com/J-sanchez
+            (505) 929-3436 &nbsp;·&nbsp; jonathan.sanchez@windstream.net &nbsp;·&nbsp; github.com/J-sanchez
           </p>
         </Reveal>
 
