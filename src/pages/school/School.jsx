@@ -63,7 +63,13 @@ const accolades = [
 
 const Education = () => {
   return (
-    <div className="relative z-0 bg-bg">
+    <>
+      <title>Education | Jonathan Sanchez</title>
+      <meta
+        name="description"
+        content="The computer science and mathematics coursework, certificates, and accolades behind Jonathan Sanchez's compliance software and AI work."
+      />
+      <div className="relative z-0 bg-bg">
       <div className="fixed inset-0 -z-10 hero-glow pointer-events-none" aria-hidden="true" />
       <section className="relative min-h-screen text-text px-6 md:px-10 pt-32 pb-24 md:pb-32">
       <div className="max-w-6xl mx-auto">
@@ -125,6 +131,7 @@ const Education = () => {
       </div>
       </section>
     </div>
+    </>
   );
 };
 

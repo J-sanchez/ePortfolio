@@ -194,7 +194,13 @@ const CaseStudyLink = ({ slug }) => (
 
 const Resume = () => {
   return (
-    <div className="relative z-0 bg-bg">
+    <>
+      <title>Résumé | Jonathan C. Sanchez</title>
+      <meta
+        name="description"
+        content="Full résumé for Jonathan C. Sanchez — Product Owner & Project Lead at Los Alamos National Laboratory, covering AI products, program management, skills, and education."
+      />
+      <div className="relative z-0 bg-bg">
       <div className="fixed inset-0 -z-10 hero-glow pointer-events-none" aria-hidden="true" />
       <section className="relative min-h-screen text-text px-6 md:px-10 pt-32 pb-24 md:pb-32">
       <div className="max-w-6xl mx-auto">
@@ -379,6 +385,7 @@ const Resume = () => {
       </div>
       </section>
     </div>
+    </>
   );
 };
 
