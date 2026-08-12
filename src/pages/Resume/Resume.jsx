@@ -11,9 +11,9 @@ import PhotoAccent from '../../components/PhotoAccent';
 
 const jobs = [
   {
-    title: 'Product Owner & Project Lead | EPC',
+    title: 'Product Owner & Project Lead (11.2025 – Present) / Service Owner (07.2022 – 11.2025) – EPC',
     company: 'Los Alamos National Laboratory',
-    date: '07.2022 – Present',
+    date: '',
     aiProducts: [
       {
         name: 'EPC AI Compliance Assistant',

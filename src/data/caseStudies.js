@@ -19,8 +19,8 @@ const caseStudies = [
     number: '01',
     title: 'ECMS Modernization',
     photo: { name: 'photo-trestle', alt: 'An old wooden rail trestle, partially collapsed, in a foggy forest' },
-    role: 'Product Owner & Project Lead | Program Management',
-    period: 'Leading since 2022 · six-year, $9M program',
+    role: 'Service Owner → Product Owner & Project Lead | Program Management',
+    period: 'On the program since 2022, leading since Nov 2025 · six-year, $9M program',
     tagline:
       "Leading the six-year modernization of LANL's environmental compliance system, off legacy Access databases and onto a unified platform.",
     problem:
@@ -31,7 +31,7 @@ const caseStudies = [
       "Manage a $1.3M annual budget for EPC's Agile Scrum Team and support the broader six-year ECMS program, roughly $1.3M–$1.5M a year in contractor and developer funding (~$9M cumulative, a clean estimate), across 20+ implementation swimlanes a year.",
       'Coordinate across ADS, OSH, NPI, and WM divisions plus external consultants to keep implementation and system alignment on track.',
       'Delivered a proof-of-concept application projected to save LANL $140,000 in its first year by eliminating roughly 100 redundant software licenses.',
-      'Stepped into the lead role over the past year, after supporting ECMS in a junior PM capacity while also serving as Product Owner of the Scrum Team.',
+      'Stepped into the lead role in November 2025, after three years as Service Owner on the Scrum Team.',
     ],
     result:
       'Eight Access databases retired, nine integrations delivered, and a proof-of-concept projected to save six figures in its first year, all while keeping the broader division wide portfolio on track.',
@@ -49,7 +49,7 @@ const caseStudies = [
     title: 'EPC AI Compliance Assistant',
     photo: { name: 'photo-butterfly', alt: 'A butterfly resting on a cluster of yellow wildflowers' },
     role: 'Product Owner & Project Lead | AI Products Portfolio',
-    period: '2024 – Present',
+    period: '2026 – Present',
     tagline:
       'A RAG-powered assistant that gives compliance staff fast, defensible answers against live federal regulations, built and security cleared for a secure network.',
     problem:
@@ -77,7 +77,7 @@ const caseStudies = [
       aspect: 'aspect-[16/9]',
     },
     role: 'Product Owner | AI Products Portfolio',
-    period: '2024 – Present',
+    period: '2026 – Present',
     tagline:
       'A Claude-powered sprint analyst that catches duplicate work and surfaces risk across a 12-app portfolio, used daily, not just demoed.',
     problem:
