@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 /**
@@ -9,7 +9,7 @@ import { useLocation } from 'react-router-dom';
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // html has scroll-behavior: smooth globally (for the Hero's #about anchor
     // link), which also hijacks this reset and animates it. If the previous
     // page was scrolled far down, that animation can get interrupted by the
@@ -19,7 +19,17 @@ const ScrollToTop = () => {
     const previousBehavior = html.style.scrollBehavior;
     html.style.scrollBehavior = 'auto';
     window.scrollTo(0, 0);
-    html.style.scrollBehavior = previousBehavior;
+
+    // Navigating from a deep scroll on a tall page to a much shorter one:
+    // the browser clamps scrollTop to the new (still-settling) content
+    // height as layout continues to resolve on the next frame or two --
+    // silently overriding the reset above. Re-assert it after paint.
+    const raf = requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      html.style.scrollBehavior = previousBehavior;
+    });
+
+    return () => cancelAnimationFrame(raf);
   }, [pathname]);
 
   return null;

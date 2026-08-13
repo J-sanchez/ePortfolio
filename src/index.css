@@ -22,6 +22,11 @@
 
 html {
   scroll-behavior: smooth;
+  /* Without this, Chrome's scroll anchoring fights ScrollToTop's reset on
+     route change: scrolled deep on a tall page, navigate to a shorter one,
+     and the browser "helpfully" clamps/re-anchors scroll to the new page's
+     max instead of landing at 0. */
+  overflow-anchor: none;
 }
 
 body {
